@@ -1,0 +1,38 @@
+/* Stylowanie odnośnika */
+.link {
+  position: relative;
+  text-decoration: none;
+  color: white;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* Odległość linii od tekstu */
+  width: 100%;
+  height: 2px; /* Grubość linii */
+  background-color: #333;
+  transform: scaleX(0); /* Początkowo linia jest niewidoczna */
+  transition: transform 0.3s ease; /* Efekt animacji */
+}
+
+.link:hover::after {
+  transform: scaleX(1); /* Po najechaniu linia staje się widoczna */
+}
+
+nav section {
+  width: 47%;
+  padding: 20px;
+}
+
+section#lewy {
+  text-align: left;
+  background-color: black;
+  float: right;
+}
+
+section#prawy {
+  text-align: right;
+  background-color: black;
+}
